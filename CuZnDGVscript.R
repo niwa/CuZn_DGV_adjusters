@@ -64,6 +64,7 @@ GetZnGuidelines <- function(sens = zn.species.data, tMLR = MLR.coeffs, input, Zn
     names(GV)<-c("ZnPC99", "ZnPC95", "ZnPC90", "ZnPC80")  
     GV <- cbind(GV, Note) 
   } 
+  GV$Provisional_BioZnConc <- input[,Zncol]*4.1/GV$ZnPC95
   input<-cbind(input,GV)
   return(input)
 }
