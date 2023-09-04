@@ -17,7 +17,9 @@ https://research.csiro.au/software/burrlioz/
    
 ## Development
 The code and files will be updated if the draft DGVs are updated. Feel free to submit any requests for new functionality, and get in contact if there are issues. 
+For help with the code, contact below. For help using github, ask someone else. 
 
 ## Contacts
 Maintainer: Jennifer Gadd  jennifer.gadd@niwa.co.nz
+With thanks to Caroline Fraser (LWP) on the R coding.
 
