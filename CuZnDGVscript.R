@@ -52,9 +52,9 @@ GetZnGuidelines <- function(sens = zn.species.data, tMLR = MLR.coeffs, input, Zn
   #Equation below do not contribute to the formula
   sens<-merge(sens,tMLR,by.x="Model used",by.y="type")
   #Apply generic equation form
-  sens$AdjECx <- exp(sens$Sensitivity + sens$DOC*log(input$DOC) + sens$H*log(input$H)+
-                       sens$pH*input$pH + sens$DOC.pH*log(input$DOC)*input$pH)
-  
+  sens$AdjECx <- exp(sens$Sensitivity + sens$DOC*log(myDOC) + sens$H*log(myH)+
+                       sens$pH*mypH + sens$DOC.pH*log(myDOC)*mypH)
+   
   #Fit Burr function and extract protection values
   res <- try(fit(sens$AdjECx),silent = FALSE)
   if(isTRUE(class(res)=="try-error")) { # if data cannot be fitted, NA is recorded
